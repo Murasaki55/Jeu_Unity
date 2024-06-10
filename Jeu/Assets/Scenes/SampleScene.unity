@@ -546,26 +546,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2105054745665934314, guid: 62d8552edb7f0454180dbfbeb8fd1311, type: 3}
-      propertyPath: m_Avatar
-      value: 
-      objectReference: {fileID: 9000000, guid: 0db6669600fa4be40af8b78b1e5b3714, type: 3}
-    - target: {fileID: 2105054745665934314, guid: 62d8552edb7f0454180dbfbeb8fd1311, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: e2cf68ff4b1ffda45a77f7307dd789b9, type: 2}
-    - target: {fileID: 4297359984713015891, guid: 62d8552edb7f0454180dbfbeb8fd1311, type: 3}
-      propertyPath: m_Height
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4297359984713015891, guid: 62d8552edb7f0454180dbfbeb8fd1311, type: 3}
-      propertyPath: m_Radius
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4297359984713015891, guid: 62d8552edb7f0454180dbfbeb8fd1311, type: 3}
-      propertyPath: m_Center.y
-      value: 2.1
-      objectReference: {fileID: 0}
     - target: {fileID: 4838050937883417888, guid: 62d8552edb7f0454180dbfbeb8fd1311, type: 3}
       propertyPath: m_Name
       value: Remy
