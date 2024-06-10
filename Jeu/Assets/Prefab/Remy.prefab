@@ -1854,6 +1854,7 @@ GameObject:
   - component: {fileID: 760191525165622513}
   - component: {fileID: 760191525165622512}
   - component: {fileID: 760191525165622515}
+  - component: {fileID: -5618725007334529047}
   m_Layer: 0
   m_Name: Remy
   m_TagString: Untagged
@@ -2060,6 +2061,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 521b611700410be45810047f0a74e899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-5618725007334529047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6433821915786316205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ee663a16afebef428d3247cf838d25c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6433821915803163357

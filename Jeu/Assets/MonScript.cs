@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class collision : MonoBehaviour
+public class MonScript : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -16,14 +15,17 @@ public class collision : MonoBehaviour
     {
         
     }
-
-    void OnCollisionEnter(collision other)
+    void OnCollisionEntrer(Collision other)
     {
         switch (other.gameObject.tag)
         {
-            case "arbre":
-            break;
-            case "maison":
+        case "maison":
+        break;
+
+        case "arbre" :
+        break;
+        default:
+            Debug.Log("rien");
             break;
         }
     }
