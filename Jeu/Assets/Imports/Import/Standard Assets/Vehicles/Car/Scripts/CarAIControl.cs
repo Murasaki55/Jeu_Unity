@@ -182,9 +182,9 @@ namespace UnityStandardAssets.Vehicles.Car
         private void OnCollisionStay(Collision col)
         {
             // detect collision against other cars, so that we can take evasive action
-            if (col.rigidbody != null)
+            if (col.GetComponent<Rigidbody>() != null)
             {
-                var otherAI = col.rigidbody.GetComponent<CarAIControl>();
+                var otherAI = col.GetComponent<Rigidbody>().GetComponent<CarAIControl>();
                 if (otherAI != null)
                 {
                     // we'll take evasive action for 1 second
