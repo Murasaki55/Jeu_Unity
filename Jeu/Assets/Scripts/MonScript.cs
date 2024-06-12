@@ -40,6 +40,10 @@ public class MonScript : MonoBehaviour
                 other.transform.position = new Vector3(other.transform.position.x, -100, other.transform.position.z);
                 
             }
+            if ((Input.GetKeyDown("e"))&&(other.tag == "Plantation"))
+            {
+                remyAnimator.SetTrigger("plante");
+            }
         
         
         
@@ -48,9 +52,10 @@ public class MonScript : MonoBehaviour
     {
         if (other.tag == "arbre")
             {
-                axe.SetActive(true);
-            {
+                axe.SetActive(true);           
             }
+        
+
        Debug.Log("colisition detecter");
             m_Source.clip = m_Aie;
               m_Source.Play();      
@@ -66,6 +71,5 @@ public class MonScript : MonoBehaviour
            
     }
 
+}
 
-}
-}
