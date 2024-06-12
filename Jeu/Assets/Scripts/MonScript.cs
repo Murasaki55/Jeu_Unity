@@ -32,6 +32,8 @@ public class MonScript : MonoBehaviour
             if ((Input.GetKeyDown("e"))&&(other.tag == "arbre"))
             {
                 remyAnimator.SetTrigger("lumbering");
+                other.transform.position = new Vector3(other.transform.position.x, -100, other.transform.position.z);
+                Invoke("destruction", 2);
             }
         
         
@@ -43,5 +45,8 @@ public class MonScript : MonoBehaviour
             m_Source.clip = m_Aie;
               m_Source.Play();      
     
+    }
+    private void destruction(Collider other){
+        other.transform.position = new Vector3(other.transform.position.x, -100, other.transform.position.z);
     }
 }
