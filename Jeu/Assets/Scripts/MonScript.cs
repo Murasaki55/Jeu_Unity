@@ -35,10 +35,10 @@ public class MonScript : MonoBehaviour
                   
             if ((Input.GetKeyDown("e"))&&(other.tag == "arbre"))
             {
-                axe.SetActive(true);
+                
                 remyAnimator.SetTrigger("lumbering");
                 other.transform.position = new Vector3(other.transform.position.x, -100, other.transform.position.z);
-                axe.SetActive(false);
+                
             }
         
         
@@ -46,10 +46,26 @@ public class MonScript : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
+        if (other.tag == "arbre")
+            {
+                axe.SetActive(true);
+            {
+            }
        Debug.Log("colisition detecter");
             m_Source.clip = m_Aie;
               m_Source.Play();      
     
     }
+    void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "arbre")
+            {
+                axe.SetActive(false);
+            }
+       Debug.Log("colisition sortie");
+           
+    }
 
+
+}
 }
