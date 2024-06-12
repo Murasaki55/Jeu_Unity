@@ -15,6 +15,15 @@ public class MonScript : MonoBehaviour
     [SerializeField] GameObject pickaxe;
     [SerializeField] GameObject wood;
     [SerializeField] GameObject grange;
+    [SerializeField] GameObject carrote;
+    [SerializeField] GameObject aubergine;
+    [SerializeField] GameObject mais;
+    [SerializeField] GameObject navet;
+    [SerializeField] GameObject tomate;
+    [SerializeField] GameObject citrouille;
+    public bool plantactive;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +31,14 @@ public class MonScript : MonoBehaviour
         m_Source = GetComponent<AudioSource>();
         axe.SetActive(false);
         pickaxe.SetActive(false);
+        carrote.SetActive(false);
+        aubergine.SetActive(false);
+        mais.SetActive(false);
+        navet.SetActive(false);
+        tomate.SetActive(false);
+        citrouille.SetActive(false);
+        plantactive = false;
+    
     }
 
     // Update is called once per frame
@@ -46,6 +63,27 @@ public class MonScript : MonoBehaviour
             {
                 remyAnimator.SetTrigger("plante");
                 other.transform.position = new Vector3(35.74256F, 2.299947F, 164.9274F);
+            }
+            if (((Input.GetKeyDown("e"))&&(other.tag == "Plantation"))&&(plantactive == false))
+            {
+                remyAnimator.SetTrigger("plante");
+                carrote.SetActive(true);
+                aubergine.SetActive(true);
+                mais.SetActive(true);
+                navet.SetActive(true);
+                tomate.SetActive(true);
+                citrouille.SetActive(true);
+                plantactive=true;
+            }else{
+                if ((Input.GetKeyDown("e"))&&(other.tag == "Plantation")){
+                    remyAnimator.SetTrigger("plante");
+                    carrote.SetActive(false);
+                    aubergine.SetActive(false);
+                    mais.SetActive(false);
+                    navet.SetActive(false);
+                    tomate.SetActive(false);
+                    citrouille.SetActive(false);
+                    } 
             }
         
         
