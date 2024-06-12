@@ -9,12 +9,13 @@ using UnityEngine.SceneManagement;
 public class MonScript : MonoBehaviour
 {
 
-    
+    float positionfirewoody = 2.5;
     Animator remyAnimator;
     AudioSource m_Source;
     [SerializeField] AudioClip m_Aie;
     [SerializeField] GameObject axe;
     [SerializeField] GameObject pickaxe;
+    [SerializeField] GameObject wood;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +39,8 @@ public class MonScript : MonoBehaviour
                 
                 remyAnimator.SetTrigger("lumbering");
                 other.transform.position = new Vector3(other.transform.position.x, -100, other.transform.position.z);
-                
+                GameObject fireWood = Instantiate(wood);
+                fireWood.transform.position = new Vector3(other.transform.position.x, 1+3/2, other.transform.position.z);
             }
             if ((Input.GetKeyDown("e"))&&(other.tag == "Plantation"))
             {
@@ -56,9 +58,7 @@ public class MonScript : MonoBehaviour
             }
         
 
-       Debug.Log("colisition detecter");
-            m_Source.clip = m_Aie;
-              m_Source.Play();      
+       Debug.Log("colisition detecter");    
     
     }
     void OnTriggerExit(Collider other)
