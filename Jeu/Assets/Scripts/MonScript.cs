@@ -13,11 +13,15 @@ public class MonScript : MonoBehaviour
     Animator remyAnimator;
     AudioSource m_Source;
     [SerializeField] AudioClip m_Aie;
+    [SerializeField] GameObject axe;
+    [SerializeField] GameObject pickaxe;
     // Start is called before the first frame update
     void Start()
     {
         remyAnimator = GetComponent<Animator>();
         m_Source = GetComponent<AudioSource>();
+        axe.SetActive(false);
+        pickaxe.SetActive(false);
     }
 
     // Update is called once per frame
@@ -31,8 +35,10 @@ public class MonScript : MonoBehaviour
                   
             if ((Input.GetKeyDown("e"))&&(other.tag == "arbre"))
             {
+                axe.SetActive(true);
                 remyAnimator.SetTrigger("lumbering");
                 other.transform.position = new Vector3(other.transform.position.x, -100, other.transform.position.z);
+                axe.SetActive(false);
             }
         
         
