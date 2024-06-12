@@ -11,6 +11,8 @@ TagManager:
   - Plantation
   - axetrigg
   - firewood
+  - roche
+  - cristaux
   layers:
   - Default
   - TransparentFX

@@ -22,6 +22,8 @@ public class MonScript : MonoBehaviour
     [SerializeField] GameObject tomate;
     [SerializeField] GameObject citrouille;
     [SerializeField] GameObject WoodCrate;
+    [SerializeField] GameObject caillou;
+    [SerializeField] GameObject cristal;
     public bool plantactive;
 
     
@@ -88,6 +90,13 @@ public class MonScript : MonoBehaviour
                     GameObject caisselegume = Instantiate(WoodCrate);
                     caisselegume.transform.position = new Vector3(192, 4, 60);
                     } 
+            }
+            if ((Input.GetKeyDown("e"))&&(other.tag == "roche"))
+            {
+                
+                remyAnimator.SetTrigger("pickaxe");
+                GameObject fireWood = Instantiate(wood);
+                fireWood.transform.position = new Vector3(other.transform.position.x, 2.30F, other.transform.position.z);
             }
         
         
