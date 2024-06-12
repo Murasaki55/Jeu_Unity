@@ -83,6 +83,7 @@ public class MonScript : MonoBehaviour
                     navet.SetActive(false);
                     tomate.SetActive(false);
                     citrouille.SetActive(false);
+                    plantactive=false;
                     } 
             }
         
