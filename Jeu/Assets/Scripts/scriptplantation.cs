@@ -37,14 +37,18 @@ public class scriptplantation : MonoBehaviour
     {
         Debug.Log("Trigger");
                   
-            if ((Input.GetKeyDown("e"))&&(other.tag == "Plantation"))
+            if ((Input.GetKeyDown("e"))&&(other.tag == "Player"))
             {
                 remyAnimator.SetTrigger("plante");
                 if (stade_plant == 0){
                    plantrdm = Random.Range(0,6);
                    GameObject plante = Instantiate(planttab[plantrdm]);
+                   stade_plante +=1;
                 }
-                
+                if(stade_plant == 1){
+                    GameObject plante = Instantiate(fruittab[plantrdm]);
+                   stade_plante +=1;
+                }
                 other.transform.position = new Vector3(other.transform.position.x, -100, other.transform.position.z);
                 GameObject fireWood = Instantiate(wood);
                 fireWood.transform.position = new Vector3(other.transform.position.x, 1+3/2, other.transform.position.z);

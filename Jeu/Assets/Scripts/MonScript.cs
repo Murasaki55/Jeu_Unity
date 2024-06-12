@@ -41,10 +41,7 @@ public class MonScript : MonoBehaviour
                 GameObject fireWood = Instantiate(wood);
                 fireWood.transform.position = new Vector3(other.transform.position.x, 2.30F, other.transform.position.z);
             }
-            if ((Input.GetKeyDown("e"))&&(other.tag == "Plantation"))
-            {
-                remyAnimator.SetTrigger("plante");
-            }
+           
             if ((Input.GetKeyDown("e"))&&(other.tag == "firewood"))
             {
                 remyAnimator.SetTrigger("plante");
