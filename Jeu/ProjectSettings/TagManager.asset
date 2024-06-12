@@ -9,6 +9,7 @@ TagManager:
   - maison
   - Collide
   - Plantation
+  - axetrigg
   layers:
   - Default
   - TransparentFX

@@ -50,7 +50,7 @@ public class MonScript : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "arbre")
+        if (other.tag == "axetrigg")
             {
                 axe.SetActive(true);           
             }
@@ -63,9 +63,9 @@ public class MonScript : MonoBehaviour
     }
     void OnTriggerExit(Collider other)
     {
-        if (other.tag == "arbre")
+        if (other.tag == "axetrigg")
             {
-                axe.SetActive(false);
+                axe.SetActive(false);           
             }
        Debug.Log("colisition sortie");
            
