@@ -8,14 +8,13 @@ using UnityEngine.SceneManagement;
 
 public class MonScript : MonoBehaviour
 {
-
-    float positionfirewoody = 2.5;
     Animator remyAnimator;
     AudioSource m_Source;
     [SerializeField] AudioClip m_Aie;
     [SerializeField] GameObject axe;
     [SerializeField] GameObject pickaxe;
     [SerializeField] GameObject wood;
+    [SerializeField] GameObject grange;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,11 +39,16 @@ public class MonScript : MonoBehaviour
                 remyAnimator.SetTrigger("lumbering");
                 other.transform.position = new Vector3(other.transform.position.x, -100, other.transform.position.z);
                 GameObject fireWood = Instantiate(wood);
-                fireWood.transform.position = new Vector3(other.transform.position.x, 1+3/2, other.transform.position.z);
+                fireWood.transform.position = new Vector3(other.transform.position.x, 2.30F, other.transform.position.z);
             }
             if ((Input.GetKeyDown("e"))&&(other.tag == "Plantation"))
             {
                 remyAnimator.SetTrigger("plante");
+            }
+            if ((Input.GetKeyDown("e"))&&(other.tag == "firewood"))
+            {
+                remyAnimator.SetTrigger("plante");
+                other.transform.position = new Vector3(35.74256F, 2.299947F, 164.9274F);
             }
         
         
