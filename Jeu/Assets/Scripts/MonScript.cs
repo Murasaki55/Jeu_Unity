@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class MonScript : MonoBehaviour
 {
 
-    public GameObject other;
+    
     Animator remyAnimator;
     AudioSource m_Source;
     [SerializeField] AudioClip m_Aie;
@@ -25,18 +25,25 @@ public class MonScript : MonoBehaviour
     {
         
     }
-    void OnCollisionEntrer()
+    void OnTriggerStay(Collider other)
     {
         Debug.Log("Trigger");
-        
-            m_Source.clip = m_Aie;
-                    m_Source.Play();
-            if (Input.GetKeyDown("e"))
+                  
+            if ((Input.GetKeyDown("e"))&&(other.tag == "arbre"))
             {
                 remyAnimator.SetTrigger("lumbering");
+                other.transform.position = new Vector3(other.transform.position.x, -100, other.transform.position.z);
             }
         
         
         
     }
+    void OnTriggerEnter(Collider other)
+    {
+       Debug.Log("colisition detecter");
+            m_Source.clip = m_Aie;
+              m_Source.Play();      
+    
+    }
+
 }
