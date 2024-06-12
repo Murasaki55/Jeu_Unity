@@ -13,6 +13,7 @@ TagManager:
   - firewood
   - roche
   - cristaux
+  - pickaxetrigg
   layers:
   - Default
   - TransparentFX

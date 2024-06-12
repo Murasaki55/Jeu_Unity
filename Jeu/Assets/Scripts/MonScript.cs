@@ -95,8 +95,15 @@ public class MonScript : MonoBehaviour
             {
                 
                 remyAnimator.SetTrigger("pickaxe");
-                GameObject fireWood = Instantiate(wood);
-                fireWood.transform.position = new Vector3(other.transform.position.x, 2.30F, other.transform.position.z);
+                GameObject pierre = Instantiate(caillou);
+                pierre.transform.position = new Vector3(232.6283F, 2.667977F, 116.6443F);
+            }
+            if ((Input.GetKeyDown("e"))&&(other.tag == "cristaux"))
+            {
+                
+                remyAnimator.SetTrigger("pickaxe");
+                GameObject cristaux = Instantiate(cristal);
+                cristaux.transform.position = new Vector3(232.0249F, 2.474069F, 111.314F);
             }
         
         
@@ -108,7 +115,10 @@ public class MonScript : MonoBehaviour
             {
                 axe.SetActive(true);           
             }
-        
+        if (other.tag == "pickaxetrigg")
+            {
+                pickaxe.SetActive(true);           
+            }
 
        Debug.Log("colisition detecter");    
     
@@ -118,6 +128,10 @@ public class MonScript : MonoBehaviour
         if (other.tag == "axetrigg")
             {
                 axe.SetActive(false);           
+            }
+        if (other.tag == "pickaxetrigg")
+            {
+                pickaxe.SetActive(false);           
             }
        Debug.Log("colisition sortie");
            
