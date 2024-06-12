@@ -7,6 +7,9 @@ TagManager:
   - eau
   - arbre
   - maison
+  - Collide
+  - Plantation
+  - axetrigg
   layers:
   - Default
   - TransparentFX
