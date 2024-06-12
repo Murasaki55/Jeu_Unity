@@ -21,6 +21,7 @@ public class MonScript : MonoBehaviour
     [SerializeField] GameObject navet;
     [SerializeField] GameObject tomate;
     [SerializeField] GameObject citrouille;
+    [SerializeField] GameObject WoodCrate;
     public bool plantactive;
 
     
@@ -84,6 +85,8 @@ public class MonScript : MonoBehaviour
                     tomate.SetActive(false);
                     citrouille.SetActive(false);
                     plantactive=false;
+                    GameObject caisselegume = Instantiate(WoodCrate);
+                    caisselegume.transform.position = new Vector3(192, 4, 60);
                     } 
             }
         
