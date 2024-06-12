@@ -738,7 +738,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1628797562}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1734671632}
+        m_TargetAssemblyTypeName: Jeu, Assembly-CSharp
+        m_MethodName: AllerAuNiveau
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1628797562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -893,6 +905,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4551fbadab109da44b1897ae9b65adf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nomDeScene: Jeu
+--- !u!1 &1805445332 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 1bbb91c8d96cb2446a07151ce95d1f0f, type: 3}
+  m_PrefabInstance: {fileID: 2086419816}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1805445338
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805445332}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.502298, y: 9.91815, z: 8.857442}
+  m_Center: {x: 0, y: 0, z: 4.4292207}
 --- !u!1 &2004188630
 GameObject:
   m_ObjectHideFlags: 0
