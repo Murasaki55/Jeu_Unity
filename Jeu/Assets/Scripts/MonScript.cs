@@ -14,12 +14,14 @@ public class MonScript : MonoBehaviour
     AudioSource m_Source;
     [SerializeField] AudioClip m_Aie;
     [SerializeField] GameObject axe;
+    [SerializeField] GameObject pickaxe;
     // Start is called before the first frame update
     void Start()
     {
         remyAnimator = GetComponent<Animator>();
         m_Source = GetComponent<AudioSource>();
         axe.SetActive(false);
+        pickaxe.SetActive(false);
     }
 
     // Update is called once per frame
