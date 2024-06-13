@@ -78,7 +78,7 @@ public class MonScript : MonoBehaviour
                 citrouille.SetActive(true);
                 plantactive=true;
             }else{
-                if ((Input.GetKeyDown("e"))&&(other.tag == "Plantation")){
+                if (((Input.GetKeyDown("e"))&&(other.tag == "Plantation"))&&(plantactive == true)){
                     remyAnimator.SetTrigger("plante");
                     carrote.SetActive(false);
                     aubergine.SetActive(false);
