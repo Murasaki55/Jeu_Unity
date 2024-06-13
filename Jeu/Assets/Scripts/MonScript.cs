@@ -29,6 +29,8 @@ public class MonScript : MonoBehaviour
     [SerializeField] Text m_Score_caisse;
     [SerializeField] Text m_Score_pierre;
     [SerializeField] Text m_Score_cristal;
+    [SerializeField] Text Victoire;
+
 
     public bool plantactive;
 
@@ -176,8 +178,10 @@ public class MonScript : MonoBehaviour
        Debug.Log("colisition sortie");
            
     }
-    void win(){
-
+    void win()
+    {
+        transform.position = new Vector3(123.9F, 2.3F, 307.5F);
+        Victoire.text = "Felicitation";
     }
 
 }
