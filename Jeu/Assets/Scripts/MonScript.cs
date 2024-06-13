@@ -82,7 +82,7 @@ public class MonScript : MonoBehaviour
         m_Score_caisse.text = scorel.ToString()+ " /50";
         m_Score_pierre.text = scorep.ToString()+ " /50";
         m_Score_cristal.text = scorec.ToString()+ " /50";
-        if((( scoreb == 10)&&(scorel == 50))&&((scorep == 50)&&( scorec == 50))){
+        if((( scoreb >= 10)&&(scorel >= 50))&&((scorep >= 50)&&( scorec >= 50))){
             win();
         }
     }
