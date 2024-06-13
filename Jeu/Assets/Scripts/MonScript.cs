@@ -146,6 +146,10 @@ public class MonScript : MonoBehaviour
             {
                 pickaxe.SetActive(true);           
             }
+        if (other.tag == "mura")
+        {
+            
+        }
 
        Debug.Log("colisition detecter");    
     
