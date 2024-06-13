@@ -60,9 +60,9 @@ public class MonScript : MonoBehaviour
         scorep = 0;
         scorec = 0;
         m_Score_bois.text = scoreb.ToString() + " /10";
-        m_Score_caisse.text = scorel.ToString()+ " /10";
-        m_Score_pierre.text = scorep.ToString()+ " /10";
-        m_Score_cristal.text = scorec.ToString()+ " /10";
+        m_Score_caisse.text = scorel.ToString()+ " /50";
+        m_Score_pierre.text = scorep.ToString()+ " /50";
+        m_Score_cristal.text = scorec.ToString()+ " /50";
     
     }
 
@@ -71,15 +71,15 @@ public class MonScript : MonoBehaviour
     {
         if(((Input.GetKeyDown("w"))&&(Input.GetKeyDown("i")))&&(Input.GetKeyDown("n"))){
             scoreb = 10;
-            scorel = 10;
-            scorep = 10;
-            scorec = 10;
+            scorel = 50;
+            scorep = 50;
+            scorec = 50;
         }
        m_Score_bois.text = scoreb.ToString() + " /10";
-        m_Score_caisse.text = scorel.ToString()+ " /10";
-        m_Score_pierre.text = scorep.ToString()+ " /10";
-        m_Score_cristal.text = scorec.ToString()+ " /10"; 
-        if((( scoreb == 10)&&(scorel == 10))&&((scorep == 10)&&( scorec == 10))){
+        m_Score_caisse.text = scorel.ToString()+ " /50";
+        m_Score_pierre.text = scorep.ToString()+ " /50";
+        m_Score_cristal.text = scorec.ToString()+ " /50";
+        if((( scoreb == 10)&&(scorel == 50))&&((scorep == 50)&&( scorec == 50))){
             win();
         }
     }
