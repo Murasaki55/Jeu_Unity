@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 
@@ -24,7 +25,17 @@ public class MonScript : MonoBehaviour
     [SerializeField] GameObject WoodCrate;
     [SerializeField] GameObject caillou;
     [SerializeField] GameObject cristal;
+    [SerializeField] Text m_Score_bois;
+    [SerializeField] Text m_Score_caisse;
+    [SerializeField] Text m_Score_pierre;
+    [SerializeField] Text m_Score_cristal;
+
     public bool plantactive;
+
+    private int scoreb;
+    private int scorel;
+    private int scorep;
+    private int scorec;
 
     
     // Start is called before the first frame update
@@ -41,13 +52,25 @@ public class MonScript : MonoBehaviour
         tomate.SetActive(false);
         citrouille.SetActive(false);
         plantactive = false;
+
+        scoreb = 0;
+        scorel = 0;
+        scorep = 0;
+        scorec = 0;
+        m_Score_bois.text = scoreb.ToString() + " /10";
+        m_Score_caisse.text = scorel.ToString()+ " /10";
+        m_Score_pierre.text = scorep.ToString()+ " /10";
+        m_Score_cristal.text = scorec.ToString()+ " /10";
     
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+       m_Score_bois.text = scoreb.ToString() + " /10";
+        m_Score_caisse.text = scorel.ToString()+ " /10";
+        m_Score_pierre.text = scorep.ToString()+ " /10";
+        m_Score_cristal.text = scorec.ToString()+ " /10"; 
     }
     void OnTriggerStay(Collider other)
     {
@@ -66,6 +89,7 @@ public class MonScript : MonoBehaviour
             {
                 remyAnimator.SetTrigger("plante");
                 other.transform.position = new Vector3(35.74256F, 2.299947F, 164.9274F);
+                scoreb++;
             }
             if (((Input.GetKeyDown("e"))&&(other.tag == "Plantation"))&&(plantactive == false))
             {
@@ -89,6 +113,7 @@ public class MonScript : MonoBehaviour
                     plantactive=false;
                     GameObject caisselegume = Instantiate(WoodCrate);
                     caisselegume.transform.position = new Vector3(192, 4, 60);
+                    scorel++;
                     } 
             }
             if ((Input.GetKeyDown("e"))&&(other.tag == "roche"))
@@ -97,6 +122,7 @@ public class MonScript : MonoBehaviour
                 remyAnimator.SetTrigger("pickaxe");
                 GameObject pierre = Instantiate(caillou);
                 pierre.transform.position = new Vector3(232.6283F, 2.667977F, 116.6443F);
+                scorep++;
             }
             if ((Input.GetKeyDown("e"))&&(other.tag == "cristaux"))
             {
@@ -104,6 +130,7 @@ public class MonScript : MonoBehaviour
                 remyAnimator.SetTrigger("pickaxe");
                 GameObject cristaux = Instantiate(cristal);
                 cristaux.transform.position = new Vector3(232.0249F, 2.474069F, 111.314F);
+                scorec++;
             }
         
         
