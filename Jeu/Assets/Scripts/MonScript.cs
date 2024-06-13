@@ -67,10 +67,19 @@ public class MonScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(((Input.GetKeyDown("w"))&&(Input.GetKeyDown("i")))&&(Input.GetKeyDown("n"))){
+            scoreb = 10;
+            scorel = 10;
+            scorep = 10;
+            scorec = 10;
+        }
        m_Score_bois.text = scoreb.ToString() + " /10";
         m_Score_caisse.text = scorel.ToString()+ " /10";
         m_Score_pierre.text = scorep.ToString()+ " /10";
         m_Score_cristal.text = scorec.ToString()+ " /10"; 
+        if((( scoreb == 10)&&(scorel == 10))&&((scorep == 10)&&( scorec == 10))){
+            win();
+        }
     }
     void OnTriggerStay(Collider other)
     {
@@ -166,6 +175,9 @@ public class MonScript : MonoBehaviour
             }
        Debug.Log("colisition sortie");
            
+    }
+    void win(){
+
     }
 
 }
