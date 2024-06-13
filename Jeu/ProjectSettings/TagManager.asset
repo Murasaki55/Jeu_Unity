@@ -14,6 +14,8 @@ TagManager:
   - roche
   - cristaux
   - pickaxetrigg
+  - npc
+  - mura
   layers:
   - Default
   - TransparentFX
