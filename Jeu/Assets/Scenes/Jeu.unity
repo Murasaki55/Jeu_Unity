@@ -12153,6 +12153,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6126151297966205191, guid: 4c4896384163f7c428f38c4741487cdb, type: 3}
     - target: {fileID: -5618725007334529047, guid: 62d8552edb7f0454180dbfbeb8fd1311, type: 3}
+      propertyPath: m_dirt
+      value: 
+      objectReference: {fileID: 8300000, guid: 137f7fecabab279468705f2a9b570f34, type: 3}
+    - target: {fileID: -5618725007334529047, guid: 62d8552edb7f0454180dbfbeb8fd1311, type: 3}
+      propertyPath: m_mura
+      value: 
+      objectReference: {fileID: 8300000, guid: da0a6ecfecd69c5428e56eadaae0217c, type: 3}
+    - target: {fileID: -5618725007334529047, guid: 62d8552edb7f0454180dbfbeb8fd1311, type: 3}
       propertyPath: tomate
       value: 
       objectReference: {fileID: 1836059909}
@@ -12169,6 +12177,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6570511988944905212, guid: c13e6ff0b7034b94e9bc682983c40551, type: 3}
     - target: {fileID: -5618725007334529047, guid: 62d8552edb7f0454180dbfbeb8fd1311, type: 3}
+      propertyPath: m_arbre
+      value: 
+      objectReference: {fileID: 8300000, guid: a4b1220d663d9c44b98e10d1942b56d6, type: 3}
+    - target: {fileID: -5618725007334529047, guid: 62d8552edb7f0454180dbfbeb8fd1311, type: 3}
       propertyPath: pickaxe
       value: 
       objectReference: {fileID: 1669864492}
@@ -12176,6 +12188,10 @@ PrefabInstance:
       propertyPath: Victoire
       value: 
       objectReference: {fileID: 1513253800}
+    - target: {fileID: -5618725007334529047, guid: 62d8552edb7f0454180dbfbeb8fd1311, type: 3}
+      propertyPath: m_pierre
+      value: 
+      objectReference: {fileID: 8300000, guid: 2e2d3875d8440394794ff9fb46206fea, type: 3}
     - target: {fileID: -5618725007334529047, guid: 62d8552edb7f0454180dbfbeb8fd1311, type: 3}
       propertyPath: WoodCrate
       value: 

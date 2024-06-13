@@ -11,7 +11,10 @@ public class MonScript : MonoBehaviour
 {
     Animator remyAnimator;
     AudioSource m_Source;
-    [SerializeField] AudioClip m_Aie;
+    [SerializeField] AudioClip m_mura;
+    [SerializeField] AudioClip m_arbre;
+    [SerializeField] AudioClip m_pierre;
+    [SerializeField] AudioClip m_dirt;
     [SerializeField] GameObject axe;
     [SerializeField] GameObject pickaxe;
     [SerializeField] GameObject wood;
@@ -83,6 +86,7 @@ public class MonScript : MonoBehaviour
             win();
         }
     }
+
     void OnTriggerStay(Collider other)
     {
         Debug.Log("Trigger");
@@ -92,6 +96,8 @@ public class MonScript : MonoBehaviour
                 
                 remyAnimator.SetTrigger("lumbering");
                 other.transform.position = new Vector3(other.transform.position.x, -100, other.transform.position.z);
+                m_Source.clip = m_arbre;
+                m_Source.Play();
                 GameObject fireWood = Instantiate(wood);
                 fireWood.transform.position = new Vector3(other.transform.position.x, 2.30F, other.transform.position.z);
             }
@@ -105,6 +111,8 @@ public class MonScript : MonoBehaviour
             if (((Input.GetKeyDown("e"))&&(other.tag == "Plantation"))&&(plantactive == false))
             {
                 remyAnimator.SetTrigger("plante");
+                m_Source.clip = m_dirt;
+                m_Source.Play();
                 carrote.SetActive(true);
                 aubergine.SetActive(true);
                 mais.SetActive(true);
@@ -115,6 +123,8 @@ public class MonScript : MonoBehaviour
             }else{
                 if (((Input.GetKeyDown("e"))&&(other.tag == "Plantation"))&&(plantactive == true)){
                     remyAnimator.SetTrigger("plante");
+                    m_Source.clip = m_dirt;
+                    m_Source.Play();
                     carrote.SetActive(false);
                     aubergine.SetActive(false);
                     mais.SetActive(false);
@@ -131,6 +141,8 @@ public class MonScript : MonoBehaviour
             {
                 
                 remyAnimator.SetTrigger("pickaxe");
+                m_Source.clip = m_pierre;
+                m_Source.Play();
                 GameObject pierre = Instantiate(caillou);
                 pierre.transform.position = new Vector3(232.6283F, 2.667977F, 116.6443F);
                 scorep++;
@@ -139,6 +151,8 @@ public class MonScript : MonoBehaviour
             {
                 
                 remyAnimator.SetTrigger("pickaxe");
+                m_Source.clip = m_pierre;
+                m_Source.Play();
                 GameObject cristaux = Instantiate(cristal);
                 cristaux.transform.position = new Vector3(232.0249F, 2.474069F, 111.314F);
                 scorec++;
@@ -159,7 +173,8 @@ public class MonScript : MonoBehaviour
             }
         if (other.tag == "mura")
         {
-            
+            m_Source.clip = m_mura;
+            m_Source.Play();
         }
 
        Debug.Log("colisition detecter");    
